@@ -47,7 +47,7 @@ contract NftVendor is ERC2981, ReentrancyGuard, Ownable {
 
   event ItemBought(
     address indexed buyer,
-    address indexed nftAddress,
+    address indexed seller,
     uint256 indexed tokenId,
     uint256 price
   );
@@ -195,7 +195,7 @@ contract NftVendor is ERC2981, ReentrancyGuard, Ownable {
       tokenId
     );
     _removeTokenFromAllListedTokensEnumeration(tokenId);
-    emit ItemBought(msg.sender, collection, tokenId, listedItem.price);
+    emit ItemBought(msg.sender, listedItem.seller, tokenId, listedItem.price);
   }
 
    function payERC20Royalties(uint256 _tokenId, uint256 _nftPrice, address _erc20Token) private  {

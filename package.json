@@ -13,6 +13,7 @@
   "dependencies": {
     "chalk": "^5.0.0",
     "chalk-animation": "^1.6.0",
+    "classnames": "^2.3.2",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.0",
     "fs-jetpack": "^4.3.1",
@@ -23,6 +24,7 @@
     "ora": "^6.1.0",
     "pm2": "^5.1.2",
     "postgresql": "^0.0.1",
+    "universal-cookie": "^4.0.4",
     "yargs": "^16.2.0"
   },
   "devDependencies": {

@@ -272,22 +272,22 @@ pm2.connect(false, async function (err) {
         `View log output: ${chalk.cyanBright(`npx pm2 logs web`)}${"\n"}`
       );
 
-      spinner.start("Runing init Truffle Script");
+      // spinner.start("Runing init Truffle Script");
 
-      await runProcess({
-        name: `truffle-script`,
-        cwd: "./ethereum",
-        script: "truffle",
-        args:
-          environment.selected === "local"
-            ? "exec scripts/truffle-init.js"
-            : "exec scripts/truffle-init.js --network mumbai",
-        watch: false,
-        wait_ready: true,
-        autorestart: false,
-      });
+      // await runProcess({
+      //   name: `truffle-script`,
+      //   cwd: "./ethereum",
+      //   script: "truffle",
+      //   args:
+      //     environment.selected === "local"
+      //       ? "exec scripts/truffle-init.js"
+      //       : "exec scripts/truffle-init.js --network mumbai",
+      //   watch: false,
+      //   wait_ready: true,
+      //   autorestart: false,
+      // });
 
-      spinner.succeed(chalk.greenBright("Truffle initializated"));
+      // spinner.succeed(chalk.greenBright("Truffle initializated"));
 
       //   // ------------------------------------------------------------
       //   // --------------------- DONE -------------------------------
